@@ -1,6 +1,13 @@
 <?php
-include 'config.php';
-$user_id = $_SESSION['user_id'];
+session_start();
 
-mysqli_query($conn, "INSERT INTO memberships (user_id) VALUES ($user_id)");
-header("Location: index.php");
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
+/* Later you can add payment logic here */
+
+header("Location: dashboard.php");
+exit;
+

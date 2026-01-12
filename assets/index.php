@@ -45,7 +45,8 @@
         </div>
     <?php else: ?>
         <p class="mt-4">Please <a href="login.php">login</a> to purchase a membership.</p>
-    <?php endif; ?>
+  
+  <?php endif; ?>
 </div>
 
 </body>
